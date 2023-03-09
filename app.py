@@ -38,7 +38,7 @@ def predict():
             os.environ["OAUTHLIB_INSECURE_TRANSPORT"] = "1"
             api_service_name = "youtube"
             api_version = "v3"
-            DEVELOPER_KEY = "AIzaSyBA-YMpW3hwqrwV6xaLpY5kpoivQkbYHWk"
+            DEVELOPER_KEY = "ENTER_YOUR_API_DEVELOPER_KEY"
             youtube = googleapiclient.discovery.build(api_service_name, api_version, developerKey = DEVELOPER_KEY)
             link_request = youtube.commentThreads().list(part="snippet", maxResults=200,  order="relevance",videoId= v_id)
             link_response = link_request.execute()
